@@ -16,5 +16,21 @@ namespace Fast_Food_Restaurant_System
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult iExit;
+
+            iExit = MessageBox.Show("Confirm you want to exit the program", "Royal Buffet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (iExit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
