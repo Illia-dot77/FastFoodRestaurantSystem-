@@ -32,5 +32,27 @@ namespace Fast_Food_Restaurant_System
                 Application.Exit();
             }
         }
+
+        private void RestTextBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Text = "0";
+                    else
+                        func(control.Controls);
+            };
+            func(Controls);
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            RestTextBoxes();
+        }
     }
+
+    
 }
