@@ -41,6 +41,8 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
+        
+
         //-------------------------------------------------RestTextBoxes()-------------------------------------------------------------------------\\
         private void RestTextBoxes()
         {
@@ -56,6 +58,23 @@ namespace Fast_Food_Restaurant_System
             };
             func(Controls);
         }
+
+        private void RestMaskedTextBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is MaskedTextBox)
+                        (control as MaskedTextBox).Text = " ";
+                    else
+                        func(control.Controls);
+            };
+            func(Controls);
+        }
+
+
 
         //-------------------------------------------------RestCheckBoxes()-------------------------------------------------------------------------\\
         private void RestCheckBoxes()
@@ -73,11 +92,13 @@ namespace Fast_Food_Restaurant_System
             func(Controls);
         }
 
-        private void Reset_Click(object sender, EventArgs e)
+        private void Reset(object sender, EventArgs e)
         {
             RestTextBoxes();
             RestCheckBoxes();
+            RestMaskedTextBoxes();
         }
+
 
         //------------------------------------------------EnableTextBoxes()-------------------------------------------------------------------------\\
         private void EnableTextBoxes()
@@ -101,6 +122,7 @@ namespace Fast_Food_Restaurant_System
         }
 
         //------------------------------------------------CheckedChanged-------------------------------------------------------------------------\\
+
         private void HumBurger_CheckedChanged(object sender, EventArgs e)
         {
             if (HumBurger.Checked == true)
@@ -426,7 +448,6 @@ namespace Fast_Food_Restaurant_System
 
         private void CocaCola_CheckedChanged(object sender, EventArgs e)
         {
-
             if (CocaCola.Checked == true)
 
             {
