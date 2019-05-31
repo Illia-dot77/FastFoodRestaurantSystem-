@@ -85,8 +85,7 @@
             this.txtPineappleCake = new System.Windows.Forms.TextBox();
             this.txtMilkShake = new System.Windows.Forms.TextBox();
             this.txtChocolateMuffin = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtPaymentType = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -100,6 +99,7 @@
             this.txtKnightMenu = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Total = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -449,11 +449,13 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(30, 60);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 29);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // label5
             // 
@@ -725,25 +727,16 @@
             this.txtChocolateMuffin.Text = "0";
             this.txtChocolateMuffin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox29
+            // txtPaymentType
             // 
-            this.textBox29.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(48, 102);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(80, 24);
-            this.textBox29.TabIndex = 3;
-            this.textBox29.Text = "0";
-            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 51);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Total";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtPaymentType.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaymentType.Location = new System.Drawing.Point(48, 102);
+            this.txtPaymentType.Name = "txtPaymentType";
+            this.txtPaymentType.Size = new System.Drawing.Size(80, 24);
+            this.txtPaymentType.TabIndex = 3;
+            this.txtPaymentType.Text = "0";
+            this.txtPaymentType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPaymentType.TextChanged += new System.EventHandler(this.txtPaymentType_TextChanged);
             // 
             // button2
             // 
@@ -876,7 +869,7 @@
             this.panel4.Controls.Add(this.txtSubTotal);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.txtTax);
-            this.panel4.Controls.Add(this.textBox29);
+            this.panel4.Controls.Add(this.txtPaymentType);
             this.panel4.Controls.Add(this.txtChange);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label7);
@@ -892,13 +885,24 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.Total);
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.Exit);
             this.panel6.Location = new System.Drawing.Point(-2, 195);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(396, 66);
             this.panel6.TabIndex = 7;
+            // 
+            // Total
+            // 
+            this.Total.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total.Location = new System.Drawing.Point(3, 8);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(125, 51);
+            this.Total.TabIndex = 6;
+            this.Total.Text = "Total";
+            this.Total.UseVisualStyleBackColor = true;
+            this.Total.Click += new System.EventHandler(this.Total_Click);
             // 
             // panel5
             // 
@@ -1027,8 +1031,7 @@
         private System.Windows.Forms.TextBox txtPineappleCake;
         private System.Windows.Forms.TextBox txtMilkShake;
         private System.Windows.Forms.TextBox txtChocolateMuffin;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtPaymentType;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Label label2;
@@ -1043,6 +1046,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtKnightMenu;
+        private System.Windows.Forms.Button Total;
     }
 }
 

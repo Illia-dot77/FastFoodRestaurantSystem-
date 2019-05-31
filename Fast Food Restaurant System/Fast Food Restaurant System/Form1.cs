@@ -13,7 +13,37 @@ namespace Fast_Food_Restaurant_System
     public partial class Form1 : Form
     {
 
-        
+        const double Price_CocaCola = 1.99;
+        const double Price_Tea = 1.49;
+        const double Price_BottleWater = 1.99;
+        const double Price_AppleJuice = 2.49;
+        const double Price_Coffee = 3.99;
+        const double Price_IceCream = 1.79;
+        const double Price_PineappleCake = 4.99;
+        const double Price_MilkShake = 3.69;
+        const double Price_ChocolateMuffin = 3.49;
+        const double Price_ComboMenu = 12.99;
+        const double Price_KnightMenu = 13.49;
+        const double Price_WingsFestival = 11.99;
+        const double Price_ChildrensMenu = 9.99;
+        const double Price_RoyalMenu = 15.99;
+        const double Price_Humburger = 2.99;
+        const double Price_CheeseBurger = 3.39;
+        const double Price_BaconBurger = 3.99;
+        const double Price_Steak = 4.49;
+        const double Price_MeatPie = 4.99;
+        const double Price_VegeterianSalad = 3.79;
+        const double Price_MeatSalad = 3.89;
+        const double Price_Fries = 2.99;
+        const double Price_Nuggets = 3.99;
+        const double Price_HotDog = 2.89;
+        const double Tax_Rate = 1;
+
+        double iTax, iSubTotal, iTotal;
+
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -497,6 +527,104 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Cash")
+            {
+                txtPaymentType.Enabled = true;
+                txtPaymentType.Text = "";
+                txtPaymentType.Focus();
+            }
+            else
+            {
+                txtPaymentType.Enabled = false;
+                txtPaymentType.Text = "0";
+            }
+        }
+
+        private void Total_Click(object sender, EventArgs e)
+        {
+            double[] itemcost = new double[24];
+            itemcost[0] = Convert.ToDouble(txtHumBurger.Text) * Price_Humburger;
+            itemcost[1] = Convert.ToDouble(txtCheeseBurger.Text) * Price_CheeseBurger;
+            itemcost[2] = Convert.ToDouble(txtBaconBurger.Text) * Price_BaconBurger;
+            itemcost[3] = Convert.ToDouble(txtSteak.Text) * Price_Steak;
+            itemcost[4] = Convert.ToDouble(txtMeatPie.Text) * Price_MeatPie;
+            itemcost[5] = Convert.ToDouble(txtVegeterianSalad.Text) * Price_VegeterianSalad;
+            itemcost[6] = Convert.ToDouble(txtMeatSalad.Text) * Price_MeatSalad;
+            itemcost[7] = Convert.ToDouble(txtFries.Text) * Price_Fries;
+            itemcost[8] = Convert.ToDouble(txtNuggets.Text) * Price_Nuggets;
+            itemcost[9] = Convert.ToDouble(txtHotDog.Text) * Price_HotDog;
+            itemcost[10] = Convert.ToDouble(txtComboMenu.Text) * Price_ComboMenu;
+            itemcost[11] = Convert.ToDouble(txtKnightMenu.Text) * Price_KnightMenu;
+            itemcost[12] = Convert.ToDouble(txtWingsFestival.Text) * Price_WingsFestival;
+            itemcost[13] = Convert.ToDouble(txtChildrensMenu.Text) * Price_ChildrensMenu;
+            itemcost[14] = Convert.ToDouble(txtRoyalMenu.Text) * Price_RoyalMenu;
+            itemcost[15] = Convert.ToDouble(txtBottlewater.Text) * Price_BottleWater;
+            itemcost[16] = Convert.ToDouble(txtTea.Text) * Price_Tea;
+            itemcost[17] = Convert.ToDouble(txtAppleJuice.Text) * Price_AppleJuice;
+            itemcost[18] = Convert.ToDouble(txtCoffee.Text) * Price_Coffee;
+            itemcost[19] = Convert.ToDouble(txtCocaCola.Text) * Price_CocaCola;
+            itemcost[20] = Convert.ToDouble(txtIceCream.Text) * Price_IceCream;
+            itemcost[21] = Convert.ToDouble(txtPineappleCake.Text) * Price_PineappleCake;
+            itemcost[22] = Convert.ToDouble(txtMilkShake.Text) * Price_MilkShake;
+            itemcost[23] = Convert.ToDouble(txtChocolateMuffin.Text) * Price_ChocolateMuffin;
+
+            double cost, ichange;
+
+            if (comboBox1.Text == "Cash")
+            {
+                iSubTotal = itemcost[0] + itemcost[1] + itemcost[2] + itemcost[3] + itemcost[4] + itemcost[5]
+                    + itemcost[6] + itemcost[7] + itemcost[8] + itemcost[9] + itemcost[10] + itemcost[11]
+                    + itemcost[12] + itemcost[13] + itemcost[14] + itemcost[15] + itemcost[16] + itemcost[17]
+                    + itemcost[18] + itemcost[19] + itemcost[20] + itemcost[21] + itemcost[22] + itemcost[23];
+
+                txtSubTotal.Text = Convert.ToString(iSubTotal);
+                iTax = (iSubTotal * Tax_Rate) / 100;
+                txtTax.Text = Convert.ToString(iTax);
+                iTotal = (iSubTotal + iTax);
+                txtTotal.Text = Convert.ToString(iTotal);
+
+                ichange = Convert.ToDouble(txtPaymentType.Text);
+                cost = ichange - (iTax + iTotal);
+                txtChange.Text = Convert.ToString(cost);
+
+                txtChange.Text = string.Format("{0:C}", cost);
+                txtTax.Text = string.Format("{0:C}", iTax);
+                txtSubTotal.Text = string.Format("{0:C}", iSubTotal);
+                txtTotal.Text = string.Format("{0:C}", iTotal);
+
+            }
+
+            else
+            {
+                iSubTotal = itemcost[0] + itemcost[1] + itemcost[2] + itemcost[3] + itemcost[4] + itemcost[5]
+                   + itemcost[6] + itemcost[7] + itemcost[8] + itemcost[9] + itemcost[10] + itemcost[11]
+                   + itemcost[12] + itemcost[13] + itemcost[14] + itemcost[15] + itemcost[16] + itemcost[17]
+                   + itemcost[18] + itemcost[19] + itemcost[20] + itemcost[21] + itemcost[22] + itemcost[23];
+
+                txtSubTotal.Text = Convert.ToString(iSubTotal);
+                iTax = (iSubTotal * Tax_Rate) / 100;
+                txtTax.Text = Convert.ToString(iTax);
+                iTotal = (iSubTotal + iTax);
+                txtTotal.Text = Convert.ToString(iTotal);
+
+
+
+
+                txtTax.Text = string.Format("{0:C}", iTax);
+                txtSubTotal.Text = string.Format("{0:C}", iSubTotal);
+                txtTotal.Text = string.Format("{0:C}", iTotal);
+            }
+
+
+        }
+
+        private void txtPaymentType_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
         private void MilkShake_CheckedChanged(object sender, EventArgs e)
         {
             if (MilkShake.Checked == true)
@@ -513,6 +641,8 @@ namespace Fast_Food_Restaurant_System
                 txtMilkShake.Text = "0";
             }
         }
+
+        
 
         private void ChocolateMuffin_CheckedChanged(object sender, EventArgs e)
         {
