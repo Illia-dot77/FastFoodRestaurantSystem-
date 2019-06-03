@@ -101,12 +101,18 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.Total = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,7 +122,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1243, 119);
+            this.panel1.Size = new System.Drawing.Size(1649, 119);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -506,6 +512,7 @@
             this.txtHumBurger.TabIndex = 3;
             this.txtHumBurger.Text = "0";
             this.txtHumBurger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHumBurger.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtCheeseBurger
             // 
@@ -516,6 +523,7 @@
             this.txtCheeseBurger.TabIndex = 3;
             this.txtCheeseBurger.Text = "0";
             this.txtCheeseBurger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCheeseBurger.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtBaconBurger
             // 
@@ -526,6 +534,7 @@
             this.txtBaconBurger.TabIndex = 3;
             this.txtBaconBurger.Text = "0";
             this.txtBaconBurger.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBaconBurger.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtSteak
             // 
@@ -536,6 +545,7 @@
             this.txtSteak.TabIndex = 3;
             this.txtSteak.Text = "0";
             this.txtSteak.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSteak.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtMeatPie
             // 
@@ -546,6 +556,7 @@
             this.txtMeatPie.TabIndex = 3;
             this.txtMeatPie.Text = "0";
             this.txtMeatPie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMeatPie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtVegeterianSalad
             // 
@@ -556,6 +567,7 @@
             this.txtVegeterianSalad.TabIndex = 3;
             this.txtVegeterianSalad.Text = "0";
             this.txtVegeterianSalad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVegeterianSalad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtMeatSalad
             // 
@@ -566,6 +578,7 @@
             this.txtMeatSalad.TabIndex = 3;
             this.txtMeatSalad.Text = "0";
             this.txtMeatSalad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMeatSalad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtFries
             // 
@@ -576,6 +589,7 @@
             this.txtFries.TabIndex = 3;
             this.txtFries.Text = "0";
             this.txtFries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFries.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtNuggets
             // 
@@ -586,6 +600,7 @@
             this.txtNuggets.TabIndex = 3;
             this.txtNuggets.Text = "0";
             this.txtNuggets.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNuggets.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtHotDog
             // 
@@ -596,6 +611,7 @@
             this.txtHotDog.TabIndex = 3;
             this.txtHotDog.Text = "0";
             this.txtHotDog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHotDog.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtComboMenu
             // 
@@ -606,6 +622,7 @@
             this.txtComboMenu.TabIndex = 3;
             this.txtComboMenu.Text = "0";
             this.txtComboMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtComboMenu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtWingsFestival
             // 
@@ -616,6 +633,7 @@
             this.txtWingsFestival.TabIndex = 3;
             this.txtWingsFestival.Text = "0";
             this.txtWingsFestival.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWingsFestival.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtChildrensMenu
             // 
@@ -626,6 +644,7 @@
             this.txtChildrensMenu.TabIndex = 3;
             this.txtChildrensMenu.Text = "0";
             this.txtChildrensMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChildrensMenu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtRoyalMenu
             // 
@@ -636,6 +655,7 @@
             this.txtRoyalMenu.TabIndex = 3;
             this.txtRoyalMenu.Text = "0";
             this.txtRoyalMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRoyalMenu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtBottlewater
             // 
@@ -646,6 +666,7 @@
             this.txtBottlewater.TabIndex = 3;
             this.txtBottlewater.Text = "0";
             this.txtBottlewater.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBottlewater.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtTea
             // 
@@ -656,6 +677,7 @@
             this.txtTea.TabIndex = 3;
             this.txtTea.Text = "0";
             this.txtTea.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtAppleJuice
             // 
@@ -666,6 +688,7 @@
             this.txtAppleJuice.TabIndex = 3;
             this.txtAppleJuice.Text = "0";
             this.txtAppleJuice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAppleJuice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtCoffee
             // 
@@ -676,6 +699,7 @@
             this.txtCoffee.TabIndex = 3;
             this.txtCoffee.Text = "0";
             this.txtCoffee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCoffee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtCocaCola
             // 
@@ -686,6 +710,7 @@
             this.txtCocaCola.TabIndex = 3;
             this.txtCocaCola.Text = "0";
             this.txtCocaCola.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCocaCola.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtIceCream
             // 
@@ -696,6 +721,7 @@
             this.txtIceCream.TabIndex = 3;
             this.txtIceCream.Text = "0";
             this.txtIceCream.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIceCream.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtPineappleCake
             // 
@@ -706,6 +732,7 @@
             this.txtPineappleCake.TabIndex = 3;
             this.txtPineappleCake.Text = "0";
             this.txtPineappleCake.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPineappleCake.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtMilkShake
             // 
@@ -716,6 +743,7 @@
             this.txtMilkShake.TabIndex = 3;
             this.txtMilkShake.Text = "0";
             this.txtMilkShake.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMilkShake.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtChocolateMuffin
             // 
@@ -726,6 +754,7 @@
             this.txtChocolateMuffin.TabIndex = 3;
             this.txtChocolateMuffin.Text = "0";
             this.txtChocolateMuffin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChocolateMuffin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // txtPaymentType
             // 
@@ -737,6 +766,7 @@
             this.txtPaymentType.Text = "0";
             this.txtPaymentType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPaymentType.TextChanged += new System.EventHandler(this.txtPaymentType_TextChanged);
+            this.txtPaymentType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // button2
             // 
@@ -859,6 +889,7 @@
             this.txtKnightMenu.TabIndex = 3;
             this.txtKnightMenu.Text = "0";
             this.txtKnightMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtKnightMenu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumbersOnly);
             // 
             // panel4
             // 
@@ -924,12 +955,56 @@
             this.panel5.Size = new System.Drawing.Size(359, 564);
             this.panel5.TabIndex = 10;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1174, 139);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(437, 495);
+            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.Delete);
+            this.panel7.Controls.Add(this.Update);
+            this.panel7.Location = new System.Drawing.Point(1174, 637);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(437, 66);
+            this.panel7.TabIndex = 12;
+            // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(229, 3);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(139, 56);
+            this.Delete.TabIndex = 1;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Update
+            // 
+            this.Update.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.Location = new System.Drawing.Point(54, 2);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(135, 57);
+            this.Update.TabIndex = 0;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1163, 715);
+            this.ClientSize = new System.Drawing.Size(1642, 715);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtChocolateMuffin);
             this.Controls.Add(this.txtHotDog);
@@ -952,6 +1027,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Application";
@@ -967,6 +1043,8 @@
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1047,6 +1125,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtKnightMenu;
         private System.Windows.Forms.Button Total;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Update;
     }
 }
 

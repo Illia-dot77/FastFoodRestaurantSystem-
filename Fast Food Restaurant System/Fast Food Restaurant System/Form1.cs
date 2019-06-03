@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Fast_Food_Restaurant_System
 {
     public partial class Form1 : Form
     {
+
+        private SQLiteConnection sqlconn;
+        private SQLiteCommand sqlCmd;
+        private DataTable sqlDT = new DataTable();
+        private DataSet DS = new DataSet();
+        private SQLiteDataAdapter DB;
 
         const double Price_CocaCola = 1.99;
         const double Price_Tea = 1.49;
@@ -37,7 +44,7 @@ namespace Fast_Food_Restaurant_System
         const double Price_Fries = 2.99;
         const double Price_Nuggets = 3.99;
         const double Price_HotDog = 2.89;
-        const double Tax_Rate = 1;
+        const double Tax_Rate = 2.8;
 
         double iTax, iSubTotal, iTotal;
 
@@ -51,13 +58,47 @@ namespace Fast_Food_Restaurant_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add(" ");
+            comboBox1.Items.Add("");
             comboBox1.Items.Add("Cash");
             comboBox1.Items.Add("Master Card");
             comboBox1.Items.Add("Visa Card");
             comboBox1.Items.Add("Debit Card");
 
             EnableTextBoxes();
+            LoadData();
+        }
+
+        private void SetConnection()
+        {
+            sqlconn = new SQLiteConnection("Data Source = C: \\Users\\Мойша\\Desktop\\GitPro\\Fast Food Restaurant System\\Fast Food Restaurant System\\bin\\Debug\\Orders.db");
+        }
+
+        private void ExecuteQuery(string OrdersIDq)
+        {
+            SetConnection();
+            sqlconn.Open();
+            sqlCmd = sqlconn.CreateCommand();
+            sqlCmd.CommandText = OrdersIDq;
+            sqlCmd.ExecuteNonQuery();
+            sqlCmd.Dispose();
+            sqlconn.Close();
+        }
+
+        private void LoadData()
+        {
+            SetConnection();
+            sqlconn.Open();
+            sqlCmd = sqlconn.CreateCommand();
+            string CommandText = "select * from Orders";
+            DB = new SQLiteDataAdapter(CommandText, sqlconn);
+            DS.Reset();
+            DB.Fill(DS);
+            sqlDT = DS.Tables[0];
+            dataGridView1.DataSource = sqlDT;
+            sqlconn.Close();
+
+
+
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -159,7 +200,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtHumBurger.Enabled = true;
-                txtHumBurger.Text = " ";
+                txtHumBurger.Text = "0";
                 txtHumBurger.Focus();
 
             }
@@ -176,7 +217,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtCheeseBurger.Enabled = true;
-                txtCheeseBurger.Text = " ";
+                txtCheeseBurger.Text = "0";
                 txtCheeseBurger.Focus();
 
             }
@@ -193,7 +234,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtBaconBurger.Enabled = true;
-                txtBaconBurger.Text = " ";
+                txtBaconBurger.Text = "0";
                 txtBaconBurger.Focus();
 
             }
@@ -210,7 +251,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtSteak.Enabled = true;
-                txtSteak.Text = " ";
+                txtSteak.Text = "0";
                 txtSteak.Focus();
 
             }
@@ -227,7 +268,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtMeatPie.Enabled = true;
-                txtMeatPie.Text = " ";
+                txtMeatPie.Text = "0";
                 txtMeatPie.Focus();
 
             }
@@ -244,7 +285,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtVegeterianSalad.Enabled = true;
-                txtVegeterianSalad.Text = " ";
+                txtVegeterianSalad.Text = "0";
                 txtVegeterianSalad.Focus();
 
             }
@@ -261,7 +302,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtMeatSalad.Enabled = true;
-                txtMeatSalad.Text = " ";
+                txtMeatSalad.Text = "0";
                 txtMeatSalad.Focus();
 
             }
@@ -278,7 +319,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtFries.Enabled = true;
-                txtFries.Text = " ";
+                txtFries.Text = "0";
                 txtFries.Focus();
 
             }
@@ -295,7 +336,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtNuggets.Enabled = true;
-                txtNuggets.Text = " ";
+                txtNuggets.Text = "0";
                 txtNuggets.Focus();
 
             }
@@ -312,7 +353,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtHotDog.Enabled = true;
-                txtHotDog.Text = " ";
+                txtHotDog.Text = "0";
                 txtHotDog.Focus();
 
             }
@@ -329,7 +370,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtComboMenu.Enabled = true;
-                txtComboMenu.Text = " ";
+                txtComboMenu.Text = "0";
                 txtComboMenu.Focus();
 
             }
@@ -346,7 +387,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtKnightMenu.Enabled = true;
-                txtKnightMenu.Text = " ";
+                txtKnightMenu.Text = "0";
                 txtKnightMenu.Focus();
 
             }
@@ -363,7 +404,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtWingsFestival.Enabled = true;
-                txtWingsFestival.Text = " ";
+                txtWingsFestival.Text = "0";
                 txtWingsFestival.Focus();
 
             }
@@ -380,7 +421,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtChildrensMenu.Enabled = true;
-                txtChildrensMenu.Text = " ";
+                txtChildrensMenu.Text = "0";
                 txtChildrensMenu.Focus();
 
             }
@@ -397,7 +438,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtRoyalMenu.Enabled = true;
-                txtRoyalMenu.Text = " ";
+                txtRoyalMenu.Text = "0";
                 txtRoyalMenu.Focus();
 
             }
@@ -414,7 +455,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtBottlewater.Enabled = true;
-                txtBottlewater.Text = " ";
+                txtBottlewater.Text = "0";
                 txtBottlewater.Focus();
 
             }
@@ -431,7 +472,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtTea.Enabled = true;
-                txtTea.Text = " ";
+                txtTea.Text = "0";
                 txtTea.Focus();
 
             }
@@ -448,7 +489,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtAppleJuice.Enabled = true;
-                txtAppleJuice.Text = " ";
+                txtAppleJuice.Text = "0";
                 txtAppleJuice.Focus();
 
             }
@@ -465,7 +506,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtCoffee.Enabled = true;
-                txtCoffee.Text = " ";
+                txtCoffee.Text = "0";
                 txtCoffee.Focus();
 
             }
@@ -482,7 +523,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtCocaCola.Enabled = true;
-                txtCocaCola.Text = " ";
+                txtCocaCola.Text = "0";
                 txtCocaCola.Focus();
 
             }
@@ -499,7 +540,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtIceCream.Enabled = true;
-                txtIceCream.Text = " ";
+                txtIceCream.Text = "0";
                 txtIceCream.Focus();
 
             }
@@ -516,7 +557,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtPineappleCake.Enabled = true;
-                txtPineappleCake.Text = " ";
+                txtPineappleCake.Text = "0";
                 txtPineappleCake.Focus();
 
             }
@@ -532,7 +573,7 @@ namespace Fast_Food_Restaurant_System
             if (comboBox1.Text == "Cash")
             {
                 txtPaymentType.Enabled = true;
-                txtPaymentType.Text = "";
+                txtPaymentType.Text = "0";
                 txtPaymentType.Focus();
             }
             else
@@ -625,13 +666,56 @@ namespace Fast_Food_Restaurant_System
             
         }
 
+        private void NumbersOnly(object sender, KeyPressEventArgs e)
+        {
+            int asciiCode = Convert.ToInt32(e.KeyChar);
+            if((asciiCode != 8))
+            {
+                if((asciiCode >= 48 && asciiCode <= 57))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Numbers Only Please!", "Error: Number Only", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    e.Handled = true;
+
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtChange.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            txtTotal.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            txtTax.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            txtSubTotal.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            string OrdersIDq = "insert into Orders (Change, Total, Tax, SubTotal)values('" + txtChange + "','" 
+                + txtTotal + "','" + txtTax + "','" + txtSubTotal + "')";
+
+            ExecuteQuery(OrdersIDq);
+            LoadData();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            string OrdersIDq = "delete from Orders where ID= id"+ txtChange.Text + txtTotal.Text + txtTax.Text + txtSubTotal.Text;
+
+            ExecuteQuery(OrdersIDq);
+            LoadData();
+        }
+
         private void MilkShake_CheckedChanged(object sender, EventArgs e)
         {
             if (MilkShake.Checked == true)
 
             {
                 txtMilkShake.Enabled = true;
-                txtMilkShake.Text = " ";
+                txtMilkShake.Text = "0";
                 txtMilkShake.Focus();
 
             }
@@ -650,7 +734,7 @@ namespace Fast_Food_Restaurant_System
 
             {
                 txtChocolateMuffin.Enabled = true;
-                txtChocolateMuffin.Text = " ";
+                txtChocolateMuffin.Text = "0";
                 txtChocolateMuffin.Focus();
 
             }
