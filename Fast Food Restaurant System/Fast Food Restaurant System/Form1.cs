@@ -56,7 +56,7 @@ namespace Fast_Food_Restaurant_System
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             comboBox1.Items.Add("");
             comboBox1.Items.Add("Cash");
@@ -68,12 +68,12 @@ namespace Fast_Food_Restaurant_System
             LoadData();
         }
 
-        private void SetConnection()
+        public void SetConnection()
         {
-            sqlconn = new SQLiteConnection("Data Source = C: \\Users\\Мойша\\Desktop\\GitPro\\Fast Food Restaurant System\\Fast Food Restaurant System\\bin\\Debug\\Orders.db");
+            sqlconn = new SQLiteConnection("Data Source = Orders.db");
         }
 
-        private void ExecuteQuery(string OrdersIDq)
+        public void ExecuteQuery(string OrdersIDq)
         {
             SetConnection();
             sqlconn.Open();
@@ -84,7 +84,7 @@ namespace Fast_Food_Restaurant_System
             sqlconn.Close();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             SetConnection();
             sqlconn.Open();
@@ -96,26 +96,23 @@ namespace Fast_Food_Restaurant_System
             sqlDT = DS.Tables[0];
             dataGridView1.DataSource = sqlDT;
             sqlconn.Close();
-
-
-
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        public void Exit_Click(object sender, EventArgs e)
         {
             DialogResult iExit;
 
-            iExit = MessageBox.Show("Confirm you want to exit the program", "Royal Buffet", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            iExit = MessageBox.Show("Confirm you want to Exit", "Restaurant System", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (iExit == DialogResult.Yes)
             {
                 Application.Exit();
             }
         }
 
-        
+
 
         //-------------------------------------------------RestTextBoxes()-------------------------------------------------------------------------\\
-        private void RestTextBoxes()
+        public void RestTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -130,7 +127,7 @@ namespace Fast_Food_Restaurant_System
             func(Controls);
         }
 
-        private void RestMaskedTextBoxes()
+        public void RestMaskedTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -148,7 +145,7 @@ namespace Fast_Food_Restaurant_System
 
 
         //-------------------------------------------------RestCheckBoxes()-------------------------------------------------------------------------\\
-        private void RestCheckBoxes()
+        public void RestCheckBoxes()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -163,7 +160,7 @@ namespace Fast_Food_Restaurant_System
             func(Controls);
         }
 
-        private void Reset(object sender, EventArgs e)
+        public void Reset(object sender, EventArgs e)
         {
             RestTextBoxes();
             RestCheckBoxes();
@@ -172,7 +169,7 @@ namespace Fast_Food_Restaurant_System
 
 
         //------------------------------------------------EnableTextBoxes()-------------------------------------------------------------------------\\
-        private void EnableTextBoxes()
+        public void EnableTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -187,14 +184,11 @@ namespace Fast_Food_Restaurant_System
             func(Controls);
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         //------------------------------------------------CheckedChanged-------------------------------------------------------------------------\\
 
-        private void HumBurger_CheckedChanged(object sender, EventArgs e)
+        public void HumBurger_CheckedChanged(object sender, EventArgs e)
         {
             if (HumBurger.Checked == true)
 
@@ -211,7 +205,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void CheeseBurger_CheckedChanged(object sender, EventArgs e)
+        public void CheeseBurger_CheckedChanged(object sender, EventArgs e)
         {
             if (CheeseBurger.Checked == true)
 
@@ -228,7 +222,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void BaconBurger_CheckedChanged(object sender, EventArgs e)
+        public void BaconBurger_CheckedChanged(object sender, EventArgs e)
         {
             if (BaconBurger.Checked == true)
 
@@ -245,7 +239,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void Steak_CheckedChanged(object sender, EventArgs e)
+        public void Steak_CheckedChanged(object sender, EventArgs e)
         {
             if (Steak.Checked == true)
 
@@ -262,7 +256,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void MeatPie_CheckedChanged(object sender, EventArgs e)
+        public void MeatPie_CheckedChanged(object sender, EventArgs e)
         {
             if (MeatPie.Checked == true)
 
@@ -279,7 +273,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void VegeterianSalad_CheckedChanged(object sender, EventArgs e)
+        public void VegeterianSalad_CheckedChanged(object sender, EventArgs e)
         {
             if (VegeterianSalad.Checked == true)
 
@@ -296,7 +290,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void MeatSalad_CheckedChanged(object sender, EventArgs e)
+        public void MeatSalad_CheckedChanged(object sender, EventArgs e)
         {
             if (MeatSalad.Checked == true)
 
@@ -313,7 +307,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void Fries_CheckedChanged(object sender, EventArgs e)
+        public void Fries_CheckedChanged(object sender, EventArgs e)
         {
             if (Fries.Checked == true)
 
@@ -330,7 +324,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void Nuggets_CheckedChanged(object sender, EventArgs e)
+        public void Nuggets_CheckedChanged(object sender, EventArgs e)
         {
             if (Nuggets.Checked == true)
 
@@ -347,7 +341,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void HotDog_CheckedChanged(object sender, EventArgs e)
+        public void HotDog_CheckedChanged(object sender, EventArgs e)
         {
             if (HotDog.Checked == true)
 
@@ -364,7 +358,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void ComboMenu_CheckedChanged(object sender, EventArgs e)
+        public void ComboMenu_CheckedChanged(object sender, EventArgs e)
         {
             if (ComboMenu.Checked == true)
 
@@ -381,7 +375,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void KnightMenu_CheckedChanged(object sender, EventArgs e)
+        public void KnightMenu_CheckedChanged(object sender, EventArgs e)
         {
             if (KnightMenu.Checked == true)
 
@@ -398,7 +392,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void WingsFestival_CheckedChanged(object sender, EventArgs e)
+        public void WingsFestival_CheckedChanged(object sender, EventArgs e)
         {
             if (WingsFestival.Checked == true)
 
@@ -415,7 +409,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void ChildrensMenu_CheckedChanged(object sender, EventArgs e)
+        public void ChildrensMenu_CheckedChanged(object sender, EventArgs e)
         {
             if (ChildrensMenu.Checked == true)
 
@@ -432,7 +426,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void RoyalMenu_CheckedChanged(object sender, EventArgs e)
+        public void RoyalMenu_CheckedChanged(object sender, EventArgs e)
         {
             if (RoyalMenu.Checked == true)
 
@@ -449,7 +443,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void BottleWater_CheckedChanged(object sender, EventArgs e)
+        public void BottleWater_CheckedChanged(object sender, EventArgs e)
         {
             if (BottleWater.Checked == true)
 
@@ -466,7 +460,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void Tea_CheckedChanged(object sender, EventArgs e)
+        public void Tea_CheckedChanged(object sender, EventArgs e)
         {
             if (Tea.Checked == true)
 
@@ -483,7 +477,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void AppleJuice_CheckedChanged(object sender, EventArgs e)
+        public void AppleJuice_CheckedChanged(object sender, EventArgs e)
         {
             if (AppleJuice.Checked == true)
 
@@ -500,7 +494,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void Coffee_CheckedChanged(object sender, EventArgs e)
+        public void Coffee_CheckedChanged(object sender, EventArgs e)
         {
             if (Coffee.Checked == true)
 
@@ -517,7 +511,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void CocaCola_CheckedChanged(object sender, EventArgs e)
+        public void CocaCola_CheckedChanged(object sender, EventArgs e)
         {
             if (CocaCola.Checked == true)
 
@@ -534,7 +528,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void IceCream_CheckedChanged(object sender, EventArgs e)
+        public void IceCream_CheckedChanged(object sender, EventArgs e)
         {
             if (IceCream.Checked == true)
 
@@ -551,7 +545,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void PineappleCake_CheckedChanged(object sender, EventArgs e)
+        public void PineappleCake_CheckedChanged(object sender, EventArgs e)
         {
             if (PineappleCake.Checked == true)
 
@@ -568,7 +562,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        public void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (comboBox1.Text == "Cash")
             {
@@ -583,7 +577,7 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void Total_Click(object sender, EventArgs e)
+        public void Total_Click(object sender, EventArgs e)
         {
             double[] itemcost = new double[24];
             itemcost[0] = Convert.ToDouble(txtHumBurger.Text) * Price_Humburger;
@@ -648,10 +642,7 @@ namespace Fast_Food_Restaurant_System
                 iTax = (iSubTotal * Tax_Rate) / 100;
                 txtTax.Text = Convert.ToString(iTax);
                 iTotal = (iSubTotal + iTax);
-                txtTotal.Text = Convert.ToString(iTotal);
-
-
-
+                txtTotal.Text = Convert.ToString(iTotal);            
 
                 txtTax.Text = string.Format("{0:C}", iTax);
                 txtSubTotal.Text = string.Format("{0:C}", iSubTotal);
@@ -661,12 +652,12 @@ namespace Fast_Food_Restaurant_System
 
         }
 
-        private void txtPaymentType_TextChanged(object sender, EventArgs e)
+        public void txtPaymentType_TextChanged(object sender, EventArgs e)
         {
             
         }
 
-        private void NumbersOnly(object sender, KeyPressEventArgs e)
+        public void NumbersOnly(object sender, KeyPressEventArgs e)
         {
             int asciiCode = Convert.ToInt32(e.KeyChar);
             if((asciiCode != 8))
@@ -684,32 +675,32 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtChange.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            
+            txtPaymentType.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             txtTotal.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            txtTax.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            txtSubTotal.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+
         }
 
-        private void Update_Click(object sender, EventArgs e)
+        public void Update_Click(object sender, EventArgs e)
         {
-            string OrdersIDq = "insert into Orders (Change, Total, Tax, SubTotal)values('" + txtChange + "','" 
-                + txtTotal + "','" + txtTax + "','" + txtSubTotal + "')";
+            string OrdersIDq = "insert into Orders (Total, Payment, PaymentType)values('" + txtTotal.Text + "','" 
+                + txtPaymentType.Text + "','" + comboBox1.Text + "')";
 
             ExecuteQuery(OrdersIDq);
             LoadData();
         }
 
-        private void Delete_Click(object sender, EventArgs e)
+        public void Delete_Click(object sender, EventArgs e)
         {
-            string OrdersIDq = "delete from Orders where ID= id"+ txtChange.Text + txtTotal.Text + txtTax.Text + txtSubTotal.Text;
-
+            string OrdersIDq = "delete from Orders where ID= id" + txtTotal.Text + txtPaymentType.Text + comboBox1.Text;
             ExecuteQuery(OrdersIDq);
             LoadData();
         }
 
-        private void MilkShake_CheckedChanged(object sender, EventArgs e)
+        public void MilkShake_CheckedChanged(object sender, EventArgs e)
         {
             if (MilkShake.Checked == true)
 
@@ -726,9 +717,9 @@ namespace Fast_Food_Restaurant_System
             }
         }
 
-        
 
-        private void ChocolateMuffin_CheckedChanged(object sender, EventArgs e)
+
+        public void ChocolateMuffin_CheckedChanged(object sender, EventArgs e)
         {
             if (ChocolateMuffin.Checked == true)
 

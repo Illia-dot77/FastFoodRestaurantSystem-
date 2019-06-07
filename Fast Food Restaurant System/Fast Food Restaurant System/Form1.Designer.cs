@@ -103,8 +103,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.Delete = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -971,32 +971,32 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.Delete);
             this.panel7.Controls.Add(this.Update);
-            this.panel7.Location = new System.Drawing.Point(1174, 637);
+            this.panel7.Location = new System.Drawing.Point(1238, 645);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(437, 66);
+            this.panel7.Size = new System.Drawing.Size(319, 66);
             this.panel7.TabIndex = 12;
-            // 
-            // Delete
-            // 
-            this.Delete.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(229, 3);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(139, 56);
-            this.Delete.TabIndex = 1;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = true;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Update
             // 
             this.Update.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(54, 2);
+            this.Update.Location = new System.Drawing.Point(12, 3);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(135, 57);
             this.Update.TabIndex = 0;
             this.Update.Text = "Update";
             this.Update.UseVisualStyleBackColor = true;
             this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(153, 3);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(147, 57);
+            this.Delete.TabIndex = 1;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // Form1
             // 
@@ -1127,8 +1127,8 @@
         private System.Windows.Forms.Button Total;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button Delete;
     }
 }
 
