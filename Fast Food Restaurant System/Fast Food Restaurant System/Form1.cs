@@ -142,6 +142,21 @@ namespace Fast_Food_Restaurant_System
             func(Controls);
         }
 
+        public void RestComboBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is ComboBox)
+                        (control as ComboBox).Text = "";
+                    else
+                        func(control.Controls);
+            };
+            func(Controls);
+        }
+
 
 
         //-------------------------------------------------RestCheckBoxes()-------------------------------------------------------------------------\\
@@ -165,6 +180,7 @@ namespace Fast_Food_Restaurant_System
             RestTextBoxes();
             RestCheckBoxes();
             RestMaskedTextBoxes();
+            RestComboBoxes();
         }
 
 
@@ -681,13 +697,14 @@ namespace Fast_Food_Restaurant_System
             txtPaymentType.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             txtTotal.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             comboBox1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-
+            comboBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
         }
 
         public void Update_Click(object sender, EventArgs e)
         {
-            string OrdersIDq = "insert into Orders (Total, Payment, PaymentType)values('" + txtTotal.Text + "','" 
-                + txtPaymentType.Text + "','" + comboBox1.Text + "')";
+            string OrdersIDq = "insert into Orders (Total, Payment, PaymentType, Mod)values('" + txtTotal.Text + "','" 
+                + txtPaymentType.Text + "','" + comboBox1.Text + "','"
+                + comboBox2.Text + "')";
 
             ExecuteQuery(OrdersIDq);
             LoadData();
@@ -695,9 +712,10 @@ namespace Fast_Food_Restaurant_System
 
         public void Delete_Click(object sender, EventArgs e)
         {
-            string OrdersIDq = "delete from Orders where ID= id" + txtTotal.Text + txtPaymentType.Text + comboBox1.Text;
+            string OrdersIDq = "DELETE FROM Orders";
             ExecuteQuery(OrdersIDq);
             LoadData();
+
         }
 
         public void MilkShake_CheckedChanged(object sender, EventArgs e)

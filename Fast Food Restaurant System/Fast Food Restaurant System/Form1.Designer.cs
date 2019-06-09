@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.HumBurger = new System.Windows.Forms.CheckBox();
@@ -98,13 +99,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtKnightMenu = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Total = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.Update = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -129,7 +131,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 37);
+            this.label1.Location = new System.Drawing.Point(429, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(829, 62);
             this.label1.TabIndex = 0;
@@ -895,6 +897,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.comboBox2);
             this.panel4.Controls.Add(this.txtTotal);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.txtSubTotal);
@@ -911,6 +914,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(411, 263);
             this.panel4.TabIndex = 9;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "In place",
+            "Takeaway "});
+            this.comboBox2.Location = new System.Drawing.Point(30, 144);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 29);
+            this.comboBox2.TabIndex = 8;
             // 
             // panel6
             // 
@@ -959,6 +974,15 @@
             // 
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(1174, 139);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(437, 495);
@@ -976,17 +1000,6 @@
             this.panel7.Size = new System.Drawing.Size(319, 66);
             this.panel7.TabIndex = 12;
             // 
-            // Update
-            // 
-            this.Update.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(12, 3);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(135, 57);
-            this.Update.TabIndex = 0;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
-            // 
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -998,12 +1011,23 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // Update
+            // 
+            this.Update.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.Location = new System.Drawing.Point(12, 3);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(135, 57);
+            this.Update.TabIndex = 0;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1642, 715);
+            this.ClientSize = new System.Drawing.Size(1622, 715);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtChocolateMuffin);
@@ -1129,6 +1153,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
