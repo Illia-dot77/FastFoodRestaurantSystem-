@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fast Food Restaurant System", "Fast Food Restaurant System\Fast Food Restaurant System.csproj", "{336FF8CA-23E3-4580-A32F-85E6A753D693}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fast Food Restaurant SystemTests1", "Fast Food Restaurant SystemTests1\Fast Food Restaurant SystemTests1.csproj", "{2317261C-32AE-4B3C-919C-62378F3B1B52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{336FF8CA-23E3-4580-A32F-85E6A753D693}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{336FF8CA-23E3-4580-A32F-85E6A753D693}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{336FF8CA-23E3-4580-A32F-85E6A753D693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2317261C-32AE-4B3C-919C-62378F3B1B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2317261C-32AE-4B3C-919C-62378F3B1B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2317261C-32AE-4B3C-919C-62378F3B1B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2317261C-32AE-4B3C-919C-62378F3B1B52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

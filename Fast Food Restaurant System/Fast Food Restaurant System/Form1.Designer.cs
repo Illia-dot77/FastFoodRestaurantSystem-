@@ -1075,84 +1075,161 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
+        /** Pole zawierujące glówne okno aplikacji */
+        public System.Windows.Forms.Panel panel1;
+        /** Pole zawierujące napis Fast Food Restaurant System */
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox HumBurger;
-        private System.Windows.Forms.CheckBox CheeseBurger;
-        private System.Windows.Forms.CheckBox BaconBurger;
-        private System.Windows.Forms.CheckBox Steak;
-        private System.Windows.Forms.CheckBox MeatPie;
-        private System.Windows.Forms.CheckBox VegeterianSalad;
-        private System.Windows.Forms.CheckBox MeatSalad;
-        private System.Windows.Forms.CheckBox Fries;
-        private System.Windows.Forms.CheckBox Nuggets;
-        private System.Windows.Forms.CheckBox HotDog;
-        private System.Windows.Forms.CheckBox ComboMenu;
-        private System.Windows.Forms.CheckBox KnightMenu;
-        private System.Windows.Forms.CheckBox ChildrensMenu;
-        private System.Windows.Forms.CheckBox RoyalMenu;
-        private System.Windows.Forms.CheckBox WingsFestival;
-        private System.Windows.Forms.CheckBox BottleWater;
-        private System.Windows.Forms.CheckBox Tea;
-        private System.Windows.Forms.CheckBox Coffee;
-        private System.Windows.Forms.CheckBox CocaCola;
-        private System.Windows.Forms.CheckBox IceCream;
-        private System.Windows.Forms.CheckBox PineappleCake;
-        private System.Windows.Forms.CheckBox AppleJuice;
-        private System.Windows.Forms.CheckBox MilkShake;
-        private System.Windows.Forms.CheckBox ChocolateMuffin;
+        /** Pole zawierujące pole wyboru Humburger */
+        public System.Windows.Forms.CheckBox HumBurger;
+        /** Pole zawierujące pole wyboru CheesBurger */
+        public System.Windows.Forms.CheckBox CheeseBurger;
+        /** Pole zawierujące pole wyboru BaconBurger */
+        public System.Windows.Forms.CheckBox BaconBurger;
+        /** Pole zawierujące pole wyboru Steak */
+        public System.Windows.Forms.CheckBox Steak;
+        /** Pole zawierujące pole wyboru MeatPie */
+        public System.Windows.Forms.CheckBox MeatPie;
+        /** Pole zawierujące pole wyboru VegeterianSalad */
+        public System.Windows.Forms.CheckBox VegeterianSalad;
+        /** Pole zawierujące pole wyboru Meatsalad */
+        public System.Windows.Forms.CheckBox MeatSalad;
+        /** Pole zawierujące pole wyboru Fries */
+        public System.Windows.Forms.CheckBox Fries;
+        /** Pole zawierujące pole wyboru Nuggets */
+        public System.Windows.Forms.CheckBox Nuggets;
+        /** Pole zawierujące pole wyboru HotDog */
+        public System.Windows.Forms.CheckBox HotDog;
+        /** Pole zawierujące pole wyboru ComboMenu */
+        public System.Windows.Forms.CheckBox ComboMenu;
+        /** Pole zawierujące pole wyboru KnightMenu */
+        public System.Windows.Forms.CheckBox KnightMenu;
+        /** Pole zawierujące pole wyboru ChildrensMenu */
+        public System.Windows.Forms.CheckBox ChildrensMenu;
+        /** Pole zawierujące pole wyboru RoyalMenu */
+        public System.Windows.Forms.CheckBox RoyalMenu;
+        /** Pole zawierujące pole wyboru WingsFestival */
+        public System.Windows.Forms.CheckBox WingsFestival;
+        /** Pole zawierujące pole wyboru BottleWater */
+        public System.Windows.Forms.CheckBox BottleWater;
+        /** Pole zawierujące pole wyboru Tea */
+        public System.Windows.Forms.CheckBox Tea;
+        /** Pole zawierujące pole wyboru Coffee */
+        public System.Windows.Forms.CheckBox Coffee;
+        /** Pole zawierujące pole wyboru CocaCola */
+        public System.Windows.Forms.CheckBox CocaCola;
+        /** Pole zawierujące pole wyboru IceCream */
+        public System.Windows.Forms.CheckBox IceCream;
+        /** Pole zawierujące pole wyboru PineappleCake */
+        public System.Windows.Forms.CheckBox PineappleCake;
+        /** Pole zawierujące pole wyboru AppleJuice */
+        public System.Windows.Forms.CheckBox AppleJuice;
+        /** Pole zawierujące pole wyboru MilkShake */
+        public System.Windows.Forms.CheckBox MilkShake;
+        /** Pole zawierujące pole wyboru ChocolateMuffin */
+        public System.Windows.Forms.CheckBox ChocolateMuffin;
+        /** Pole zawierujące napis Menu */
         private System.Windows.Forms.Label label;
+        /** Pole zawierujące napis Main Meals */
         private System.Windows.Forms.Label label3;
+        /** Pole zawierujące napis Beverages */
         private System.Windows.Forms.Label label4;
+        /** Pole zawierujące combo box s wyborem metody opłacenia  */
         private System.Windows.Forms.ComboBox comboBox1;
+        /** Pole zawierujące napis Change */
         private System.Windows.Forms.Label label5;
+        /** Pole zawierujące napis Tax */
         private System.Windows.Forms.Label label6;
+        /** Pole zawierujące napis Total */
         private System.Windows.Forms.Label label7;
+        /** Pole zawierujące napis SubTotal */
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtHumBurger;
-        private System.Windows.Forms.TextBox txtCheeseBurger;
-        private System.Windows.Forms.TextBox txtBaconBurger;
-        private System.Windows.Forms.TextBox txtSteak;
-        private System.Windows.Forms.TextBox txtMeatPie;
-        private System.Windows.Forms.TextBox txtVegeterianSalad;
-        private System.Windows.Forms.TextBox txtMeatSalad;
-        private System.Windows.Forms.TextBox txtFries;
-        private System.Windows.Forms.TextBox txtNuggets;
-        private System.Windows.Forms.TextBox txtHotDog;
-        private System.Windows.Forms.TextBox txtComboMenu;
-        private System.Windows.Forms.TextBox txtWingsFestival;
-        private System.Windows.Forms.TextBox txtChildrensMenu;
-        private System.Windows.Forms.TextBox txtRoyalMenu;
-        private System.Windows.Forms.TextBox txtBottlewater;
-        private System.Windows.Forms.TextBox txtTea;
-        private System.Windows.Forms.TextBox txtAppleJuice;
-        private System.Windows.Forms.TextBox txtCoffee;
-        private System.Windows.Forms.TextBox txtCocaCola;
-        private System.Windows.Forms.TextBox txtIceCream;
-        private System.Windows.Forms.TextBox txtPineappleCake;
-        private System.Windows.Forms.TextBox txtMilkShake;
-        private System.Windows.Forms.TextBox txtChocolateMuffin;
-        private System.Windows.Forms.TextBox txtPaymentType;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button Exit;
+        /** Pole zawierujące pole tekstowe Humburger */
+        public System.Windows.Forms.TextBox txtHumBurger;
+        /** Pole zawierujące pole tekstowe CheeseBurger */
+        public System.Windows.Forms.TextBox txtCheeseBurger;
+        /** Pole zawierujące pole tekstowe BaconBurger */
+        public System.Windows.Forms.TextBox txtBaconBurger;
+        /** Pole zawierujące pole tekstowe Steak */
+        public System.Windows.Forms.TextBox txtSteak;
+        /** Pole zawierujące pole tekstowe MeatPie */
+        public System.Windows.Forms.TextBox txtMeatPie;
+        /** Pole zawierujące pole tekstowe VegeterianSalad */
+        public System.Windows.Forms.TextBox txtVegeterianSalad;
+        /** Pole zawierujące pole tekstowe MeatSalad */
+        public System.Windows.Forms.TextBox txtMeatSalad;
+        /** Pole zawierujące pole tekstowe Friesr */
+        public System.Windows.Forms.TextBox txtFries;
+        /** Pole zawierujące pole tekstowe Nuggets */
+        public System.Windows.Forms.TextBox txtNuggets;
+        /** Pole zawierujące pole tekstowe HotDog */
+        public System.Windows.Forms.TextBox txtHotDog;
+        /** Pole zawierujące pole tekstowe ComboMenu */
+        public System.Windows.Forms.TextBox txtComboMenu;
+        /** Pole zawierujące pole tekstowe WingsFestival */
+        public System.Windows.Forms.TextBox txtWingsFestival;
+        /** Pole zawierujące pole tekstowe ChildrensMenu */
+        public System.Windows.Forms.TextBox txtChildrensMenu;
+        /** Pole zawierujące pole tekstowe RoyalMenu */
+        public System.Windows.Forms.TextBox txtRoyalMenu;
+        /** Pole zawierujące pole tekstowe Bottlewater */
+        public System.Windows.Forms.TextBox txtBottlewater;
+        /** Pole zawierujące pole tekstowe Tea */
+        public System.Windows.Forms.TextBox txtTea;
+        /** Pole zawierujące pole tekstowe AppleJuice */
+        public System.Windows.Forms.TextBox txtAppleJuice;
+        /** Pole zawierujące pole tekstowe Coffee */
+        public System.Windows.Forms.TextBox txtCoffee;
+        /** Pole zawierujące pole tekstowe CocaCola */
+        public System.Windows.Forms.TextBox txtCocaCola;
+        /** Pole zawierujące pole tekstowe IceCream */
+        public System.Windows.Forms.TextBox txtIceCream;
+        /** Pole zawierujące pole tekstowe pineappleCake */
+        public System.Windows.Forms.TextBox txtPineappleCake;
+        /** Pole zawierujące pole tekstowe MilkShake */
+        public System.Windows.Forms.TextBox txtMilkShake;
+        /** Pole zawierujące pole tekstowe ChocolateMuffin */
+        public System.Windows.Forms.TextBox txtChocolateMuffin;
+        /** Pole zawierujące pole tekstowe PaymnetType */
+        public System.Windows.Forms.TextBox txtPaymentType;
+        /** Pole zawierujące zawierające pryczisk */
+        public System.Windows.Forms.Button button2;
+        /** Pole zawierujące pryczisk Exit */
+        public System.Windows.Forms.Button Exit;
+        /** Pole zawierujące napis Desserts */
         private System.Windows.Forms.Label label2;
+        /** Pole zawierujące napis Payment Type */
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox txtChange;
-        private System.Windows.Forms.MaskedTextBox txtTax;
-        private System.Windows.Forms.MaskedTextBox txtSubTotal;
-        private System.Windows.Forms.MaskedTextBox txtTotal;
+        /** Pole zawierujące pole tekstowe Change */
+        public System.Windows.Forms.MaskedTextBox txtChange;
+        /** Pole zawierujące pole tekstowe Tax */
+        public System.Windows.Forms.MaskedTextBox txtTax;
+        /** Pole zawierujące pole tekstowe SubTotal */
+        public System.Windows.Forms.MaskedTextBox txtSubTotal;
+        /** Pole zawierujące pole tekstowe Total */
+        public System.Windows.Forms.MaskedTextBox txtTotal;
+        /** Pole zawierujące elementy interfejsu graficznego */
         private System.Windows.Forms.Panel panel2;
+        /** Pole zawierujące elementy interfejsu graficznego */
         private System.Windows.Forms.Panel panel3;
+        /**  Pole zawierujące elementy interfejsu graficznego */
         private System.Windows.Forms.Panel panel4;
+        /**  Pole zawierujące elementy interfejsu graficznego */
         private System.Windows.Forms.Panel panel6;
+        /**  Pole zawierujące elementy interfejsu graficznego */
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtKnightMenu;
-        private System.Windows.Forms.Button Total;
+        /** Pole zawierujące pole tekstowe KnightMenu */
+        public System.Windows.Forms.TextBox txtKnightMenu;
+        /** Pole zawierujące pryczisk Total */
+        public System.Windows.Forms.Button Total;
+        /** Pole zawierujące tablice baze danych */
         private System.Windows.Forms.DataGridView dataGridView1;
+        /**  Pole zawierujące elementy interfejsu graficznego */
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button Update;
-        private System.Windows.Forms.Button Delete;
+        /** Pole zawierujące pryczisk Update */
+        public System.Windows.Forms.Button Update;
+        /** Pole zawierujące pryczisk Delete */
+        public System.Windows.Forms.Button Delete;
+        /** Pole zawierujące pole obrania modyfikacji zamówienia */
         private System.Windows.Forms.ComboBox comboBox2;
     }
 }
