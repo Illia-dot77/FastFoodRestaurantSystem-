@@ -11,8 +11,12 @@ using System.Data.SQLite;
 
 namespace Fast_Food_Restaurant_System
 {
-    /** class Form1
-        version 1.0
+    /** 
+     * class Form1
+     * Klasa jest odpowiedzialna za funkcjonowanie wszystkich modułów programu.
+     
+        
+    
 
 
      
@@ -93,11 +97,11 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Główną funkcję aplikacji, która zawiera inne funkcje 
            \version 0.4
-           \param object sender
-           \param EventArgs e
+           \param object [sender] Parametr jest typu object, który generuje zdarzenie
+           \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia 
            \return void
 
-             Funkcja zawiera w sobie funkcji deaktywacji pól tekstowych oraz funkcji zapisywania danych do bazy danych, a także liste metody płatności.
+             Funkcja zawiera w sobie funkcji do deaktywacji pól tekstowych oraz funkcji zapisywania danych do bazy danych, a także liste metody płatności.
          
            
          */
@@ -116,7 +120,7 @@ namespace Fast_Food_Restaurant_System
         /**
           \brief Funkcja, która łączy bazę danych do aplikacji 
           \version 0.2
-          \param "Data Source = Orders.db"
+          \param Orders.db Wiersz wskazujący lokalizację bazy danych
           \return void
 
             Funkcja opisuje ścieżkę do znalezienia połączonej z programem bazy danych.
@@ -131,7 +135,7 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja wykonuje zapytania SQL bezpośrednio w bazie danych 
            \version 0.2
-           \param string OrdersIDq
+           \param string [OrdersIDq] Wiersz przechowujący zapytanie do bazy danych
            \return void
 
              Algorytm mapowania kolumn. Przyjmuje argument typu string pod nazwa OdersIDq
@@ -152,7 +156,7 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja wykonuje zapytania SQL bezpośrednio w bazie danych 
            \version 0.2
-           \param none
+           \param [none]
            \return void
 
             Funkcja wykonuje polecenie SELECT.
@@ -176,8 +180,8 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja do  do wyjścia z aplikacji 
            \version 0.2
-           \param object sender
-           \param EventArgs e
+           \param object [sender] Parametr jest typu object, który generuje zdarzenie
+           \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia 
            \return void
 
              Funkcja wyświetla komunikat wyboru do wyjścia z aplikacji.
@@ -200,7 +204,7 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja do analowania pół tekstowych
            \version 0.1
-           \param none
+           \param [none]
            \return void
 
              Funkcja analuje wszystkie wartości wv polach tekstowych.
@@ -225,7 +229,7 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja do analowania zamaskowanych combo boxów 
            \version 0.1
-           \param none
+           \param [none]
            \return void
 
              Funkcja analuje wszystkie wartości w zamaskowanych combo boxach, które odpowiednio należą różnym danym wyjściowym .
@@ -250,7 +254,7 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja do analowania combo boxów  
            \version 0.1
-           \param none
+           \param [none]
            \return void
 
              Funkcja analuje wszystkie wartości w combo boxach, które odpowiednio należą różnym metodam płatności.
@@ -277,7 +281,7 @@ namespace Fast_Food_Restaurant_System
         /**
            \brief Funkcja do analowania pół wyboru 
            \version 0.1
-           \param none
+           \param [none]
            \return void
 
              Funkcja analuje wszystkie wartości w polach tekstowych, które odpowiednio należą różnym daniam.
@@ -302,8 +306,8 @@ namespace Fast_Food_Restaurant_System
         /**
           \brief Funkcja wywolująca inne funkcji analowania pół tekstowych
           \version 0.1
-          \param object sender 
-          \param EventArgs e
+          \param object [sender] Parametr jest typu object, który generuje zdarzenie
+          \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
           \return void
 
             Funkcja jest związaną z przyciskiem Reset, wywoluje funkcji analowania pół tekstowych, analowania combo boxów, polach wyboru. 
@@ -322,7 +326,7 @@ namespace Fast_Food_Restaurant_System
         /**
           \brief Funkcja do deaktywacji pól tekstowych
           \version 0.2
-          \param None
+          \param [none]
           \return void
 
             Funkcja deaktywuje wszystkie wartości w polach tekstowych, które odpowiednio należą różnym daniam.
@@ -350,8 +354,8 @@ namespace Fast_Food_Restaurant_System
         /**
           \brief Funkcja do aktywacji odpowiedniego pola tekstowego
           \version 0.4
-          \param object sender
-          \param EventArgs e
+          \param object [sender] Parametr jest typu object, który generuje zdarzenie
+          \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
           \return void
 
             Funkcja aktywuje pole tekstowe, zawierające obiekt HamBurger.
@@ -378,8 +382,8 @@ namespace Fast_Food_Restaurant_System
         /**
           \brief Funkcja do aktywacji odpowiedniego pola tekstowego
           \version 0.3
-          \param object sender
-          \param EventArgs e
+          \param object [sender] Parametr jest typu object, który generuje zdarzenie
+          \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
           \return void
 
             Funkcja aktywuje pole tekstowe, zawierające obiekt CheesBurger.
@@ -406,8 +410,8 @@ namespace Fast_Food_Restaurant_System
         /**
           \brief Funkcja do aktywacji odpowiedniego pola tekstowego
           \version 0.3
-          \param object sender
-          \param EventArgs e
+          \param object [sender] Parametr jest typu object, który generuje zdarzenie
+          \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
           \return void
 
             Funkcja aktywuje pole tekstowe, zawierające obiekt BaconBurger.
@@ -434,8 +438,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Steak.
@@ -462,8 +466,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Meat Pie.
@@ -490,8 +494,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie 
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Vegeterian Salad.
@@ -518,8 +522,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie 
+         \param EventArgs [e]  Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Meat Salad.
@@ -546,8 +550,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Fries.
@@ -574,8 +578,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Nuggets.
@@ -602,8 +606,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Hot Dog.
@@ -630,8 +634,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Combo Menu.
@@ -658,8 +662,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do aktywacji odpowiedniego pola tekstowego
          \version 0.3
-         \param object sender
-         \param EventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
          \return void
 
            Funkcja aktywuje pole tekstowe, zawierające obiekt Knight Menu.
@@ -686,8 +690,8 @@ namespace Fast_Food_Restaurant_System
         /**
         \brief Funkcja do aktywacji odpowiedniego pola tekstowego
         \version 0.3
-        \param object sender
-        \param EventArgs e
+        \param object [sender] Parametr jest typu object, który generuje zdarzenie
+        \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
         \return void
 
           Funkcja aktywuje pole tekstowe, zawierające obiekt Wings Festival.
@@ -714,8 +718,8 @@ namespace Fast_Food_Restaurant_System
         /**
        \brief Funkcja do aktywacji odpowiedniego pola tekstowego
        \version 0.3
-       \param object sender
-       \param EventArgs e
+       \param object [sender] Parametr jest typu object, który generuje zdarzenie
+       \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
        \return void
 
          Funkcja aktywuje pole tekstowe, zawierające obiekt Childrens Menu.
@@ -742,8 +746,8 @@ namespace Fast_Food_Restaurant_System
         /**
        \brief Funkcja do aktywacji odpowiedniego pola tekstowego
        \version 0.3
-       \param object sender
-       \param EventArgs e
+       \param object [sender] Parametr jest typu object, który generuje zdarzenie
+       \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
        \return void
 
          Funkcja aktywuje pole tekstowe, zawierające obiekt Rojal Menu.
@@ -770,8 +774,8 @@ namespace Fast_Food_Restaurant_System
         /**
       \brief Funkcja do aktywacji odpowiedniego pola tekstowego
       \version 0.3
-      \param object sender
-      \param EventArgs e
+      \param object [sender] Parametr jest typu object, który generuje zdarzenie
+      \param EventArgs [e]  Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
       \return void
 
         Funkcja aktywuje pole tekstowe, zawierające obiekt Bottle Water.
@@ -798,8 +802,8 @@ namespace Fast_Food_Restaurant_System
         /**
       \brief Funkcja do aktywacji odpowiedniego pola tekstowego
       \version 0.3
-      \param object sender
-      \param EventArgs e
+      \param object [sender] Parametr jest typu object, który generuje zdarzenie
+      \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
       \return void
 
         Funkcja aktywuje pole tekstowe, zawierające obiekt Tea.
@@ -826,8 +830,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender]  Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Apple Juice.
@@ -854,8 +858,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender] Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Coffee.
@@ -882,8 +886,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender] Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Coca Cola.
@@ -910,8 +914,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender] Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e]  Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Ice Cream.
@@ -938,8 +942,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender] Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e]  Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Pineapple Cake.
@@ -966,8 +970,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji pola Cash
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender] Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, służące do wprowadzenie kwoty zdeponowanej waluty.
@@ -992,8 +996,8 @@ namespace Fast_Food_Restaurant_System
         /**
     \brief Funkcja do obliczenia procesu składania procesu zamówienia 
     \version 0.2
-    \param object sender
-    \param EventArgs e
+    \param object [sender] Parametr jest typu object, który generuje zdarzenie
+    \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
     \return void
 
       Funkcja tworzy tabele w której śa przekazywane obiektu kłasy. Funkcja  funkcja wyszukuje iTax,  iSubTotal,  iTotal 
@@ -1079,8 +1083,8 @@ namespace Fast_Food_Restaurant_System
         /**
    \brief Pusta funkcja
    \version 0.2
-   \param object sender
-   \param EventArgs e
+   \param object [sender] Parametr jest typu object, który generuje zdarzenie
+   \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
    \return void
 
      Brak działania funkcji
@@ -1093,8 +1097,8 @@ namespace Fast_Food_Restaurant_System
         /**
     \brief Funkcja do zakazu wprowadzania tekstu
     \version 0.2
-    \param object sender
-    \param KeyPressEventArgs e
+    \param object [sender] Parametr jest typu object, który generuje zdarzenie
+    \param KeyPressEventArgs [e] Obsługuje zdarzenie KeyPress, aby wydrukować typ znaku wprowadzonego do kontrolki
     \return void
 
       Funkcja nie pozwala prowadzić poszczególne symbole oprócz liczb we wszystkich polach tekstowych.
@@ -1122,8 +1126,8 @@ namespace Fast_Food_Restaurant_System
         /**
          \brief Funkcja do wypełnienia tabeli
          \version 0.3
-         \param object sender
-         \param DataGridViewCellEventArgs e
+         \param object [sender] Parametr jest typu object, który generuje zdarzenie
+         \param DataGridViewCellEventArgs [e] Reprezentuje pojedynczą komórkę w kontrolce DataGridView
          \return void
 
            Funkcja tworzy przestrzeń do wypełnienia tabeli DataGrid wartościami z obiektów Patment Type, Total, comboBox1 oraz commboBox2.
@@ -1142,8 +1146,8 @@ namespace Fast_Food_Restaurant_System
         /**
    \brief Funkcja do aktualizacji bazy danych
    \version 0.3
-   \param object sender
-   \param EventArgs e
+   \param object [sender] Parametr jest typu object, który generuje zdarzenie
+   \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
    \return void
 
      Funkcja, która wstawia wartości zdefiniowane w polach tekstowych PaymentType, Total, comboBox1 i comboBox2 w bazie danych.
@@ -1165,8 +1169,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do usunięcia danych z bazy danych
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sende]r Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja usuwa wszystkie elementy tabeli bazy danych.
@@ -1184,8 +1188,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender] Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Milk Shake.
@@ -1213,8 +1217,8 @@ namespace Fast_Food_Restaurant_System
         /**
      \brief Funkcja do aktywacji odpowiedniego pola tekstowego
      \version 0.3
-     \param object sender
-     \param EventArgs e
+     \param object [sender]  Parametr jest typu object, który generuje zdarzenie
+     \param EventArgs [e] Klasa, która dziedziczy po EventArgs i ma zadanie przesłać specyficzne parametry do zdarzenia
      \return void
 
        Funkcja aktywuje pole tekstowe, zawierające obiekt Chocolate Muffin.
